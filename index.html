@@ -65,6 +65,12 @@
             overflow-x: auto;
         }
 
+        .tableau-embed iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 1.8rem;
@@ -124,16 +130,8 @@
         <div class="dashboard-section">
             <h2>דשבורד אסטרטגי – למנהלים בכירים ובעלי הרשת</h2>
             <div class="tableau-embed">
-                <!-- Placeholder for Tableau Dashboard 1 Embed Code -->
-                <div id="tableauViz1"></div>
-                <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
-                <script>
-                    // Replace with actual Tableau embed code for Dashboard 1
-                    var placeholderDiv = document.getElementById('tableauViz1');
-                    var url = 'https://public.tableau.com/views/Dashboard1/StrategicDashboard';
-                    var options = { width: '100%', height: '600px' };
-                    var viz = new tableau.Viz(placeholderDiv, url, options);
-                </script>
+                <iframe src="https://public.tableau.com/views/Dashboard1/StrategicDashboard?:showVizHome=no&:embed=true"
+                        width="100%" height="600" frameborder="0" allowfullscreen></iframe>
             </div>
             <p>
                 הדשבורד האסטרטגי הוא הכלי שלנו להבין את התמונה הגדולה. הוא מאפשר לנו לראות כיצד המכירות והרווחים שלנו מתפתחים חודש אחר חודש, ואפילו לצלול פנימה כדי לראות אילו קטגוריות מוצרים מובילות את הצמיחה או מציגות ירידה. יחד עם זאת, הוא מציג לנו תמונת פיזור של ביצועי הסניפים שלנו, משווה בין הרווח הממוצע שאנו מפיקים לבין משך השהות הממוצע של הלקוחות בסניף. בעזרתו, נוכל לזהות מגמות ארוכות טווח, להעריך את יעילות הסניפים השונים, ולתכנן את אסטרטגיית הצמיחה וההתרחבות של הרשת באופן מבוסס נתונים. הדשבורד כמובן מאפשר לנו לסנן את הנתונים לפי עיר או סניף, ולהתמקד בכל פעם בנתונים הרלוונטיים לנו ביותר.
@@ -143,16 +141,8 @@
         <div class="dashboard-section">
             <h2>דשבורד ניהולי – למנהלי סניפים ואזורים</h2>
             <div class="tableau-embed">
-                <!-- Placeholder for Tableau Dashboard 2 Embed Code -->
-                <div id="tableauViz2"></div>
-                <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
-                <script>
-                    // Replace with actual Tableau embed code for Dashboard 2
-                    var placeholderDiv = document.getElementById('tableauViz2');
-                    var url = 'https://public.tableau.com/views/Dashboard2/ManagerialDashboard';
-                    var options = { width: '100%', height: '600px' };
-                    var viz = new tableau.Viz(placeholderDiv, url, options);
-                </script>
+                <iframe src="https://public.tableau.com/views/Dashboard2/ManagerialDashboard?:showVizHome=no&:embed=true"
+                        width="100%" height="600" frameborder="0" allowfullscreen></iframe>
             </div>
             <p>
                 הדשבורד הניהולי הוא בן לוויה יומיומי למנהלי הסניפים והאזורים, ומעניק להם תובנות מעשיות בזמן אמת. הוא מציג בפירוט את נתוני המכירות שלנו לאורך שעות היום, ומאפשר לראות בדיוק אילו מוצרים, ובמיוחד אילו סוגי קפה, נמכרים יותר בכל שעה. מידע זה עוזר למנהלים לתכנן את כמות העובדים ולייעל את מלאי הקפה בהתאם לדפוס הביקוש. בנוסף, הדשבורד מציג את ביצועי ההנחות הממוצעות שניתנות בסניף, לצד התפלגות אמצעי התשלום השונים. כך, מנהלים יכולים להעריך את השפעת מדיניות ההנחות שלהם על הרווחיות, ולנהל בצורה חכמה יותר את הקופה. פילטרים פשוטים מאפשרים להתמקד בביצועי סניף ספציפי או בטווח תאריכים מוגדר, ואף לצלול לנתונים לפי שעה.
@@ -162,16 +152,8 @@
         <div class="dashboard-section">
             <h2>דשבורד תפעולי – מנהלי תפעול וצוות המטבח / בריסטה</h2>
             <div class="tableau-embed">
-                <!-- Placeholder for Tableau Dashboard 3 Embed Code -->
-                <div id="tableauViz3"></div>
-                <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
-                <script>
-                    // Replace with actual Tableau embed code for Dashboard 3
-                    var placeholderDiv = document.getElementById('tableauViz3');
-                    var url = 'https://public.tableau.com/views/Dashboard3/OperationalDashboard';
-                    var options = { width: '100%', height: '600px' };
-                    var viz = new tableau.Viz(placeholderDiv, url, options);
-                </script>
+                <iframe src="https://public.tableau.com/views/Dashboard3/OperationalDashboard?:showVizHome=no&:embed=true"
+                        width="100%" height="600" frameborder="0" allowfullscreen></iframe>
             </div>
             <p>
                 הדשבורד התפעולי תוכנן עבור מנהלי התפעול וצוותי המטבח והבריסטות, ומתמקד בשיפור היעילות התפעולית. הוא מציג תמונה ברורה של זמן ההכנה הממוצע של כל מוצר, ביחס לרווחיות הגולמית שלו, כאשר גודל ההצגה משקף את כמות המכירות. זה מאפשר לנו לזהות במהירות מוצרים הדורשים זמן הכנה רב אך רווחיים, או כאלה שמהירים להכנה אך פחות מכניסים. בנוסף, הדשבורד מנתח את מספר הפריטים הממוצע בעסקה ואת זמן ההכנה הממוצע עבור כל ערוץ מכירה – אם זה מהקופה, מהאפליקציה או דרך טייק אווי. בעזרת תובנות אלו, נוכל לייעל את תהליכי העבודה, לזהות צווארי בקבוק, ולהקצות משאבים בצורה חכמה יותר לשיפור זרימת העבודה היומיומית בסניפים. גם כאן, ניתן לסנן את הנתונים לפי מוצר ספציפי או ערוץ מכירה כדי להתמקד בבעיות או הזדמנויות.
