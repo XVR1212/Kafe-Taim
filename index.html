@@ -3,147 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>קפה טעים - דשבורדים</title>
+    <title>דשבורדים לרשת קפה טעים</title>
     <style>
         body {
-            font-family: 'Noto Sans Hebrew', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+            font-family: 'Rubik', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             color: #333;
+            text-align: center;
             line-height: 1.6;
             direction: rtl;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-        .intro {
-            text-align: center;
-            padding: 40px 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-            opacity: 0;
-            animation: fadeIn 1s ease-in forwards;
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            animation: fadeInUp 1s ease-in-out;
         }
-        .intro p {
+
+        p {
             font-size: 1.2rem;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 40px;
+            color: #34495e;
+            animation: fadeInUp 1.2s ease-in-out;
         }
+
         .dashboard-section {
-            margin-bottom: 60px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1.4s ease-in-out;
         }
-        .dashboard-section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+
         .dashboard-section h2 {
             font-size: 1.8rem;
             color: #2c3e50;
             margin-bottom: 20px;
-            text-align: center;
         }
-        .dashboard-container {
-            position: relative;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        .dashboard-container iframe {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+
         .dashboard-section p {
             font-size: 1rem;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: justify;
+            max-width: 700px;
+            margin: 20px auto;
         }
+
+        .tableau-embed {
+            width: 100%;
+            height: 600px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
         @media (max-width: 768px) {
-            .intro p {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
                 font-size: 1rem;
             }
+
             .dashboard-section h2 {
                 font-size: 1.5rem;
             }
-            .dashboard-section p {
+
+            .tableau-embed {
+                height: 500px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
                 font-size: 0.9rem;
             }
-            .container {
-                padding: 15px;
+
+            .dashboard-section h2 {
+                font-size: 1.3rem;
+            }
+
+            .tableau-embed {
+                height: 400px;
             }
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <div class="intro">
-            <p>
-                נרגש להציג בפניכם את מערכת הדשבורדים החדשנית שפיתחנו עבור רשת בתי הקפה "קפה טעים". המערכת נועדה להפוך את נתוני המכירות העשירים שלנו לתובנות ברורות וקלות להבנה, שיסייעו לנו לייעל את הפעילות, להבין טוב יותר את לקוחותינו ולקבל החלטות מושכלות בכל רמות הארגון. יצרנו שלושה דשבורדים ייעודיים, כל אחד מהם מותאם במיוחד לצרכים הייחודיים של קהל יעד שונה, ומספר סיפור נתונים משלו.
-            </p>
-        </div>
+        <h1>מערכת דשבורדים לרשת קפה טעים</h1>
+        <p>
+            נרגש להציג בפניכם את מערכת הדשבורדים החדשנית שפיתחנו עבור רשת בתי הקפה "קפה טעים". המערכת נועדה להפוך את נתוני המכירות העשירים שלנו לתובנות ברורות וקלות להבנה, שיסייעו לנו לייעל את הפעילות, להבין טוב יותר את לקוחותינו ולקבל החלטות מושכלות בכל רמות הארגון. יצרנו שלושה דשבורדים ייעודיים, כל אחד מהם מותאם במיוחד לצרכים הייחודיים של קהל יעד שונה, ומספר סיפור נתונים משלו.
+        </p>
 
         <div class="dashboard-section">
-            <h2>דשבורד אסטרטגי</h2>
-            <div class="dashboard-container">
-                <iframe src="https://public.tableau.com/views/Book1_17415547938020/sheet0?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" title="דשבורד אסטרטגי"></iframe>
+            <h2>דשבורד אסטרטגי – למנהלים בכירים ובעלי הרשת</h2>
+            <div class="tableau-embed">
+                <!-- Placeholder for Tableau Dashboard 1 Embed Code -->
+                <div id="tableauViz1"></div>
+                <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+                <script>
+                    // Replace with actual Tableau embed code for Dashboard 1
+                    var placeholderDiv = document.getElementById('tableauViz1');
+                    var url = 'https://public.tableau.com/views/Dashboard1/StrategicDashboard';
+                    var options = { width: '100%', height: '600px' };
+                    var viz = new tableau.Viz(placeholderDiv, url, options);
+                </script>
             </div>
             <p>
-          הדשבורד האסטרטגי הוא הכלי שלנו להבין את התמונה הגדולה. הוא מאפשר לנו לראות כיצד המכירות והרווחים שלנו מתפתחים חודש אחר חודש, ואפילו לצלול פנימה כדי לראות אילו קטגוריות מוצרים מובילות את הצמיחה או מציגות ירידה. יחד עם זאת, הוא מציג לנו תמונת פיזור של ביצועי הסניפים שלנו, משווה בין הרווח הממוצע שאנו מפיקים לבין משך השהות הממוצע של הלקוחות בסניף. בעזרתו, נוכל לזהות מגמות ארוכות טווח, להעריך את יעילות הסניפים השונים, ולתכנן את אסטרטגיית הצמיחה וההתרחבות של הרשת באופן מבוסס נתונים. הדשבורד כמובן מאפשר לנו לסנן את הנתונים לפי עיר או סניף, ולהתמקד בכל פעם בנתונים הרלוונטיים לנו ביותר.
+                הדשבורד האסטרטגי הוא הכלי שלנו להבין את התמונה הגדולה. הוא מאפשר לנו לראות כיצד המכירות והרווחים שלנו מתפתחים חודש אחר חודש, ואפילו לצלול פנימה כדי לראות אילו קטגוריות מוצרים מובילות את הצמיחה או מציגות ירידה. יחד עם זאת, הוא מציג לנו תמונת פיזור של ביצועי הסניפים שלנו, משווה בין הרווח הממוצע שאנו מפיקים לבין משך השהות הממוצע של הלקוחות בסניף. בעזרתו, נוכל לזהות מגמות ארוכות טווח, להעריך את יעילות הסניפים השונים, ולתכנן את אסטרטגיית הצמיחה וההתרחבות של הרשת באופן מבוסס נתונים. הדשבורד כמובן מאפשר לנו לסנן את הנתונים לפי עיר או סניף, ולהתמקד בכל פעם בנתונים הרלוונטיים לנו ביותר.
             </p>
         </div>
 
         <div class="dashboard-section">
-            <h2>דשבורד ניהולי</h2>
-            <div class="dashboard-container">
-                <iframe src="https://public.tableau.com/app/profile/sahar.saranga/viz/Book1_17415547938020/sheet1_1" title="דשבורד ניהולי"></iframe>
+            <h2>דשבורד ניהולי – למנהלי סניפים ואזורים</h2>
+            <div class="tableau-embed">
+                <!-- Placeholder for Tableau Dashboard 2 Embed Code -->
+                <div id="tableauViz2"></div>
+                <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+                <script>
+                    // Replace with actual Tableau embed code for Dashboard 2
+                    var placeholderDiv = document.getElementById('tableauViz2');
+                    var url = 'https://public.tableau.com/views/Dashboard2/ManagerialDashboard';
+                    var options = { width: '100%', height: '600px' };
+                    var viz = new tableau.Viz(placeholderDiv, url, options);
+                </script>
             </div>
             <p>
-   הדשבורד הניהולי הוא בן לוויה יומיומי למנהלי הסניפים והאזורים, ומעניק להם תובנות מעשיות בזמן אמת. הוא מציג בפירוט את נתוני המכירות שלנו לאורך שעות היום, ומאפשר לראות בדיוק אילו מוצרים, ובמיוחד אילו סוגי קפה, נמכרים יותר בכל שעה. מידע זה עוזר למנהלים לתכנן את כמות העובדים ולייעל את מלאי הקפה בהתאם לדפוס הביקוש. בנוסף, הדשבורד מציג את ביצועי ההנחות הממוצעות שניתנות בסניף, לצד התפלגות אמצעי התשלום השונים. כך, מנהלים יכולים להעריך את השפעת מדיניות ההנחות שלהם על הרווחיות, ולנהל בצורה חכמה יותר את הקופה. פילטרים פשוטים מאפשרים להתמקד בביצועי סניף ספציפי או בטווח תאריכים מוגדר, ואף לצלול לנתונים לפי שעה.
+                הדשבורד הניהולי הוא בן לוויה יומיומי למנהלי הסניפים והאזורים, ומעניק להם תובנות מעשיות בזמן אמת. הוא מציג בפירוט את נתוני המכירות שלנו לאורך שעות היום, ומאפשר לראות בדיוק אילו מוצרים, ובמיוחד אילו סוגי קפה, נמכרים יותר בכל שעה. מידע זה עוזר למנהלים לתכנן את כמות העובדים ולייעל את מלאי הקפה בהתאם לדפוס הביקוש. בנוסף, הדשבורד מציג את ביצועי ההנחות הממוצעות שניתנות בסניף, לצד התפלגות אמצעי התשלום השונים. כך, מנהלים יכולים להעריך את השפעת מדיניות ההנחות שלהם על הרווחיות, ולנהל בצורה חכמה יותר את הקופה. פילטרים פשוטים מאפשרים להתמקד בביצועי סניף ספציפי או בטווח תאריכים מוגדר, ואף לצלול לנתונים לפי שעה.
             </p>
         </div>
 
         <div class="dashboard-section">
-            <h2>דשבורד תפעולי</h2>
-            <div class="dashboard-container">
-                <iframe src="https://public.tableau.com/views/Book1_17415547938020/sheet2_1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" title="דשבורד תפעולי"></iframe>
+            <h2>דשבורד תפעולי – מנהלי תפעול וצוות המטבח / בריסטה</h2>
+            <div class="tableau-embed">
+                <!-- Placeholder for Tableau Dashboard 3 Embed Code -->
+                <div id="tableauViz3"></div>
+                <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+                <script>
+                    // Replace with actual Tableau embed code for Dashboard 3
+                    var placeholderDiv = document.getElementById('tableauViz3');
+                    var url = 'https://public.tableau.com/views/Dashboard3/OperationalDashboard';
+                    var options = { width: '100%', height: '600px' };
+                    var viz = new tableau.Viz(placeholderDiv, url, options);
+                </script>
             </div>
             <p>
                 הדשבורד התפעולי תוכנן עבור מנהלי התפעול וצוותי המטבח והבריסטות, ומתמקד בשיפור היעילות התפעולית. הוא מציג תמונה ברורה של זמן ההכנה הממוצע של כל מוצר, ביחס לרווחיות הגולמית שלו, כאשר גודל ההצגה משקף את כמות המכירות. זה מאפשר לנו לזהות במהירות מוצרים הדורשים זמן הכנה רב אך רווחיים, או כאלה שמהירים להכנה אך פחות מכניסים. בנוסף, הדשבורד מנתח את מספר הפריטים הממוצע בעסקה ואת זמן ההכנה הממוצע עבור כל ערוץ מכירה – אם זה מהקופה, מהאפליקציה או דרך טייק אווי. בעזרת תובנות אלו, נוכל לייעל את תהליכי העבודה, לזהות צווארי בקבוק, ולהקצות משאבים בצורה חכמה יותר לשיפור זרימת העבודה היומיומית בסניפים. גם כאן, ניתן לסנן את הנתונים לפי מוצר ספציפי או ערוץ מכירה כדי להתמקד בבעיות או הזדמנויות.
             </p>
         </div>
     </div>
-
-    <script>
-        // Intersection Observer for scroll-based fade-in animation
-        const sections = document.querySelectorAll('.dashboard-section');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        sections.forEach(section => observer.observe(section));
-    </script>
 </body>
 </html>
